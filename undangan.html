@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan - Dewi & Ihsan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #071028, #0b2b4a);
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 30px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+    p {
+      margin: 8px 0;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    a.button, button {
+      display: inline-block;
+      background: #facc15;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    a.map-link {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+    .dancers {
+      overflow: hidden;
+      margin: 20px 0;
+      height: 100px;
+      position: relative;
+    }
+    .dancer {
+      position: absolute;
+      top: 40px;
+      left: -200px;
+      width: 60px;
+      height: 60px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      animation: move 20s linear infinite;
+    }
+    .dancer:nth-child(2) { animation-delay: 5s; top: 20px; }
+    .dancer:nth-child(3) { animation-delay: 10s; top: 60px; }
+    @keyframes move {
+      from { left: -200px; }
+      to { left: 110%; }
+    }
+    footer {
+      margin: 40px 0 20px 0;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Undangan Pernikahan</h1>
+  <p style="font-size:1.2rem;">Dewi Manca Indira S.Ars & Ihsan Taqwa, S.T</p>
+
+  <div class="dancers">
+    <div class="dancer"></div>
+    <div class="dancer"></div>
+    <div class="dancer"></div>
+  </div>
+
+  <div class="card">
+    <h2>Akad Nikah</h2>
+    <p>Sabtu, 6 Desember 2025</p>
+    <p>Jam 09.00 WIB</p>
+  </div>
+
+  <div class="card">
+    <h2>Resepsi</h2>
+    <p>Pukul 11.00 - 17.00 WIB</p>
+  </div>
+
+  <div class="card">
+    <h2>Lokasi Acara</h2>
+    <p>Jl. Cemp. XII No.86, RT.006/RW.3, Tlk. Pucung, Kec. Bekasi Utara,<br/> Kota Bks, Jawa Barat 17610</p>
+    <a href="https://maps.app.goo.gl/Ta7SgoaHAwpjxnnd9" target="_blank" class="map-link">Lihat di Google Maps</a>
+  </div>
+
+  <div class="card">
+    <h2>Reservasi Kehadiran</h2>
+    <button onclick="sendRSVP()">Konfirmasi Kehadiran</button>
+  </div>
+
+  <div class="card">
+    <h2>Kado Pernikahan</h2>
+    <p>E-Wallet DANA: <strong>089660890197</strong></p>
+    <p>Pengiriman hadiah ke alamat:<br/>Jl. Cemp. XII No.86, Bekasi Utara</p>
+    <a class="button" href="https://link.dana.id/minta/089660890197" target="_blank">Kirim Kado via DANA</a>
+  </div>
+
+  <div class="card">
+    <h2>Bagikan Undangan</h2>
+    <div class="share-buttons">
+      <a class="button" style="background:#22c55e;" href="https://wa.me/?text=Halo!%20Saya%20mengundang%20Anda%20ke%20pernikahan%20Dewi%20dan%20Ihsan%20pada%206%20Desember%202025.%20Detail%20undangan:%20[link-undangan]" target="_blank">WhatsApp</a>
+      <a class="button" style="background:#ec4899;" href="https://www.instagram.com/?url=[link-undangan]" target="_blank">Instagram</a>
+    </div>
+  </div>
+
+  <footer>
+    Tema: Navy • Elegan • Sentuhan Adat Sunda
+  </footer>
+
+  <script>
+    function sendRSVP() {
+      let text = encodeURIComponent("Halo, saya sudah melakukan reservasi untuk hadir di acara pernikahan.");
+      window.open("https://wa.me/6289660890197?text=" + text, "_blank");
+    }
+  </script>
+</body>
+</html>
